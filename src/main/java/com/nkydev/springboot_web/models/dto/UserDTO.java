@@ -3,7 +3,7 @@ package com.nkydev.springboot_web.models.dto;
 import com.nkydev.springboot_web.models.User;
 
 public class UserDTO {
-    
+
     private String title;
     private User user;
 
@@ -18,5 +18,5 @@ public class UserDTO {
     }
     public void setUser(User user) {
         this.user = user;
-    }    
+    }
 }

@@ -1,6 +1,5 @@
 package com.nkydev.springboot_web.controllers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,8 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nkydev.springboot_web.models.User;
 import com.nkydev.springboot_web.models.dto.UserDTO;
-import org.springframework.web.bind.annotation.RequestParam;
-;
 
 @RestController
 @RequestMapping("/api")

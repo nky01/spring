@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RequestParamsController {
 
     @GetMapping("/foo")
-    public ParamDto foo(@RequestParam(required = false, defaultValue = "Hola! Mensaje predeterminado", name = "mensaje") String message){
+    public ParamDto foo(@RequestParam String message){
 
         ParamDto param = new ParamDto();
         param.setMessage(message);

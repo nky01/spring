@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.nkydev.springboot.di.app.springboot_di.repositories.ProductRepository;
+import com.nkydev.springboot.di.app.springboot_di.models.Product;
 
 public class ProductService {
 

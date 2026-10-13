@@ -35,11 +35,11 @@ public class Product implements Cloneable{
     }
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
+    public Object clone() {
         try {
             return super.clone();
-        } catch (Exception e) {
-            return new Product(this.getId(), this.getName(), price);
+        } catch (CloneNotSupportedException e) {
+            return new Product(this.getId(), this.getName(), getPrice());
         }
     }
 

@@ -3,14 +3,14 @@ package com.nkydev.springboot.di.app.springboot_di.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.nkydev.springboot.di.app.springboot_di.repositories.ProductRepository;
-import com.nkydev.springboot.di.app.springboot_di.models.Product;
+import com.nkydev.springboot.di.app.springboot_di.repositories.ProductRepositoryImpl;
 
-public class ProductService {
+public class ProductServiceImpl implements IProductService {
 
-    private ProductRepository repository = new ProductRepository();
+    private ProductRepositoryImpl repository = new ProductRepositoryImpl();
 
-    public List<Product> findAll(){
+    @Override 
+    public List<Product> findAll() {
         return repository.findAll().stream().map(p -> {
             Double priceTax = p.getPrice() * 1.25d;
             Product newProd = (Product) p.clone();
@@ -19,8 +19,8 @@ public class ProductService {
         }).collect(Collectors.toList());
     }
 
-    public Product findById(Long id){
+    @Override 
+    public Product findById(Long id) {
         return repository.findById(id);
     }
-
 }
